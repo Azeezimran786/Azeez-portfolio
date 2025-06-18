@@ -2133,3 +2133,10 @@ footer {
   font-weight: 700;
   font-style: normal;
 }
+
+
+#work.programming-languages {
+  font-size: 4.3rem; /* slightly smaller */
+  text-align: center;
+  margin: 0 auto;
+}
