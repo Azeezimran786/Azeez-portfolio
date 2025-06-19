@@ -6,6 +6,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/scrollreveal"></script>
+
 
 
   <link rel="icon" type="image/x-icon" href="src/png/nav-avatar.png" />
@@ -287,6 +289,52 @@
       </div>
     </section>
     <!-- about section ends  -->
+
+    <!-- about section ends  -->
+    <!-- edu section starts  -->
+
+    <!-- edu section starts -->
+    <section class="skills-section-container" id="skills">
+      <div class="skills-section">
+        <div class="section-heading" data-aos="fade-up">
+          <h2 class="section-heading-article" tabindex="0" aria-label="skills heading">
+            &#60;/Skills&#62;
+          </h2>
+          <p class="sectionHeadingP"></p>
+        </div>
+    </section>
+
+    <section id="edu-education-wrapper" style="margin-top: 120px;">
+
+
+      <section id="edu-education" class="edu-timeline">
+        <div class="edu-container">
+          <!-- ITEM 1 -->
+          <div class="edu-timeline-item">
+            <div class="edu-timeline-img"></div>
+            <div class="edu-timeline-content edu-js--fadeInLeft">
+              <h1>Masters in Computer Science</h1>
+              <h2>State University of New York, Buffalo</h2>
+            </div>
+          </div>
+
+          <!-- ITEM 2 -->
+          <div class="edu-timeline-item">
+            <div class="edu-timeline-img"></div>
+            <div class="edu-timeline-content edu-js--fadeInRight">
+              <h1>Bachelors in Electronics Communication</h1>
+              <h2>NRI Institute of Technology</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- edu section ends -->
+
+    <!-- edu section ends -->
+
+
+
 
     <section class="skills-section-container" id="skills">
       <div class="skills-section">
@@ -586,7 +634,8 @@
                 <!-- <img src="src/ico/stopscams-favicon.ico" alt="stopscams website favicon" class="faviconforProject" /> -->
                 <article class="ProjectHeading">Big Mart Sales Forecasting</article>
                 <p class="ProjectDescription">
-                  Developed a full-stack sales forecasting web app using Django and R-based regression models, enabling
+                  Developed a full-stack sales forecasting web app using Django and R-based regression models,
+                  enabling
                   real-time Item Outlet Sales predictions , Optimized models through feature
                   engineering and benchmarking across Linear, Lasso, Ridge, and Tree-based approaches.
                 </p>
@@ -616,7 +665,8 @@
                 <!-- <img src="src/ico/notesync-favicon.ico" alt="notesync website favicon" class="faviconforProject" /> -->
                 <article class="ProjectHeading">Unified Web-Based Enterprise Resource Planning. </article>
                 <p class="ProjectDescription">
-                  Developed a comprehensive ERP system using Django, MySQL, and Bootstrap to streamline academic tasks
+                  Developed a comprehensive ERP system using Django, MySQL, and Bootstrap to streamline academic
+                  tasks
                   such as attendance tracking, grade management, and user roles, enhancing operational efficiency
                 </p>
                 <div class="project-buttons">
@@ -835,6 +885,7 @@
 
   <script src="main.js"></script>
 
+
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
@@ -880,6 +931,35 @@
           cursorInner.classList.remove("hover");
           cursorOuter.classList.remove("hover");
         });
+      });
+    });
+  </script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- Inline Education Animation Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sr = ScrollReveal({ reset: false });
+
+      if (window.innerWidth < 768) {
+        document.querySelectorAll('.edu-js--fadeInLeft').forEach(el => {
+          el.classList.remove('edu-js--fadeInLeft');
+          el.classList.add('edu-js--fadeInRight');
+        });
+      }
+
+      sr.reveal('.edu-js--fadeInLeft', {
+        origin: 'left',
+        distance: '300px',
+        duration: 800,
+        easing: 'ease-in-out',
+      });
+
+      sr.reveal('.edu-js--fadeInRight', {
+        origin: 'right',
+        distance: '300px',
+        duration: 800,
+        easing: 'ease-in-out',
       });
     });
   </script>

@@ -2204,3 +2204,123 @@ footer {
     transform: scale3d(0.95, 1.05, 1);
   }
 }
+
+
+
+/* here edu starts  */
+/* education timeline */
+.edu-timeline {
+  position: relative;
+}
+
+.edu-timeline::before {
+  content: '';
+  background: #C5CAE9;
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.edu-timeline-item {
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.edu-timeline-item::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.edu-timeline-img {
+  width: 30px;
+  height: 30px;
+  background: #3F51B5;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-top: 25px;
+  margin-left: -15px;
+}
+
+.edu-timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 30px 40px; /* uniform padding */
+  border-radius: 6px;
+  background: #f5f5f5;
+  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 120px; /* fix min height to unify size */
+}
+
+.edu-timeline-content h1 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.edu-timeline-content h2 {
+  margin: 8px 0 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.edu-timeline-content::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  top: 30px;
+  right: -15px;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #f5f5f5;
+}
+
+.edu-timeline-item:nth-child(even) .edu-timeline-content {
+  float: right;
+  padding: 30px 40px;
+}
+
+.edu-timeline-item:nth-child(even) .edu-timeline-content::after {
+  left: -15px;
+  right: auto;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #f5f5f5 transparent transparent;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .edu-timeline::before {
+    left: 50px;
+  }
+
+  .edu-timeline-img {
+    left: 50px;
+  }
+
+  .edu-timeline-content {
+    width: auto;
+    margin-left: 70px;
+    max-width: 100%;
+    float: none !important;
+  }
+
+  .edu-timeline-content::after {
+    left: -15px;
+    right: auto;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #f5f5f5 transparent transparent;
+  }
+}
+
+
+/* edu margin  */
+.edu-heading {
+  margin-top: 300px; /* Increase this for more space */
+}
