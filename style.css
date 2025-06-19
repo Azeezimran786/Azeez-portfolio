@@ -122,9 +122,16 @@ html {
     background: #0a0a10
 }
 
+
+ 
 ::-webkit-scrollbar-thumb {
-    background-color: #8000ff
+    background: linear-gradient(45deg, #00cfff, #c8db36); /* blue to green gradient */
+    box-shadow: 0 0 8px #00f7a2; /* glowing shine */
+    border-radius: 10px;
 }
+
+
+
 
 .cursor-inner {
     width: 8px;
@@ -442,6 +449,9 @@ noscript {
     bottom: 80px;
     opacity: 0
 }
+
+
+
 
 #hello-friend,
 #work,
