@@ -1267,7 +1267,7 @@ noscript {
             #ec4899,
             #f59e0b, #3f86bd,
             #031a46, #090e40aa,*/
-            #1a1a29);
+            #1e1e4f);
     animation: rotate-border 4s linear infinite;
     /* -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
@@ -1509,7 +1509,7 @@ footer {
 .footer-background {
     width: 100%;
     height: 100vh;
-    background-color: #031a46;
+    background-color: #1e1e4f;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -2347,8 +2347,8 @@ footer {
     width: 100%;
     padding: 30px 40px;
     border-radius: 6px;
-    /* background-color: #1e1e4f; */
-    background-color: #1a1a29;
+    background-color: #1e1e4f;
+    /* background-color: #1a1a29; */
     color: white;
     display: flex;
     flex-direction: column;
