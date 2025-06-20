@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/scrollreveal"></script>
 
-
+  <title>Azeez Abdul - Portfolio</title>
 
   <link rel="icon" type="image/x-icon" href="src/png/nav-avatar.png" />
   <!-- aos cdn -->
@@ -50,6 +50,13 @@
               &#60;/AboutMe&#62;
             </a>
           </li>
+          <li class="Education" data-aos="fade-down" data-aos-delay="400">
+            <a href="#Education" aria-label="education menu button">
+              &#60;/Education&#62;
+            </a>
+          </li>
+
+
 
           <li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
             <a href="#skills" aria-label="skills menu button">
@@ -94,6 +101,14 @@
             &#60;/AboutMe&#62;
           </a>
         </li>
+
+        <li id="education-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()">
+          <a href="#Education" tabindex="0" aria-label="education menu button">
+            &#60;/Education&#62;
+          </a>
+        </li>
+
+
         <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
           <a href="#skills" tabindex="0" aria-label="skills menu button">
             &#60;/Skills&#62;
@@ -294,41 +309,49 @@
     <!-- edu section starts  -->
 
     <!-- edu section starts -->
-    <section class="skills-section-container" id="skills">
+    <section class="skills-section-container" id="Education">
       <div class="skills-section">
         <div class="section-heading" data-aos="fade-up">
-          <h2 class="section-heading-article" tabindex="0" aria-label="skills heading">
-            &#60;/Skills&#62;
+          <h2 class="section-heading-article" tabindex="0" aria-label="education heading">
+            &#60;/Education&#62;
           </h2>
           <p class="sectionHeadingP"></p>
         </div>
+
+      </div>
     </section>
 
     <section id="edu-education-wrapper" style="margin-top: 120px;">
+      <div class="edu-container">
+        <section id="edu-education" class="edu-timeline">
 
-
-      <section id="edu-education" class="edu-timeline">
-        <div class="edu-container">
           <!-- ITEM 1 -->
           <div class="edu-timeline-item">
             <div class="edu-timeline-img"></div>
-            <div class="edu-timeline-content edu-js--fadeInLeft">
-              <h1>Masters in Computer Science</h1>
-              <h2>State University of New York, Buffalo</h2>
+            <div class="edu-timeline-border">
+              <div class="edu-timeline-content edu-js--fadeInLeft">
+                <h1>Masters in Computer Science - Artificial Intelligence</h1>
+                <h2>State University of New York, Buffalo</h2>
+              </div>
             </div>
           </div>
 
           <!-- ITEM 2 -->
           <div class="edu-timeline-item">
             <div class="edu-timeline-img"></div>
-            <div class="edu-timeline-content edu-js--fadeInRight">
-              <h1>Bachelors in Electronics Communication</h1>
-              <h2>NRI Institute of Technology</h2>
+            <div class="edu-timeline-border">
+              <div class="edu-timeline-content edu-js--fadeInRight">
+                <h1>Bachelors in Electronics Communication Engineering</h1>
+                <h2>NRI Institute of Technology</h2>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+
+        </section>
+      </div>
     </section>
+
+
     <!-- edu section ends -->
 
     <!-- edu section ends -->
