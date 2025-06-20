@@ -1262,8 +1262,8 @@ noscript {
             /* #14b8a6,
             #8b5cf6,
             #ec4899,
-            #f59e0b, */
-            #3f86bd);
+            #f59e0b, #3f86bd,
+            #031a46, #090e40aa, #1a1a29 , */#031a46  );
     animation: rotate-border 4s linear infinite;
     /* -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
