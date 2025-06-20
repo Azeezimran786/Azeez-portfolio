@@ -1223,8 +1223,8 @@ noscript {
 }
 
 .tech-stack-box {
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     justify-content: center;
     border-radius: 30px;
     border: 1px solid var(--tech-stack-box-border-color);
@@ -1237,8 +1237,57 @@ noscript {
 
 .tech-stack-box:hover .tooltip {
     opacity: 1;
-    transition-duration: .3s
+    transition-duration: .7s
 }
+ .tech-stack-box {
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background: transparent;}
+    /* keeps it transparent */
+
+/* SHINING BORDER ONLY */
+ .tech-stack-box::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: -1;
+    border-radius: inherit;
+    padding: 2px;
+    background: conic-gradient(from 0deg,
+            /* #14b8a6,
+            #8b5cf6,
+            #ec4899,
+            #f59e0b, */
+            #3f86bd);
+    animation: rotate-border 4s linear infinite;
+    /* -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    background-clip: border-box;
+    pointer-events: none; */
+
+    
+} 
+
+
+
+@keyframes rotate-border {
+    0% {
+        transform: rotate(0turn);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
 
 .tooltip {
     position: absolute;
@@ -2226,159 +2275,158 @@ footer {
 
 /* education starts  */
 .edu-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 10px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 20px;
 }
 
 .edu-timeline {
-  position: relative;
+    position: relative;
 }
 
 .edu-timeline::before {
-  content: '';
-  background-color: #2577bb;
-  width: 5px;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  /* box-shadow: 0 0 8px #2888b4, 0 0 15px #0956d1; */
+    content: '';
+    background-color: #2577bb;
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* box-shadow: 0 0 8px #2888b4, 0 0 15px #0956d1; */
 }
 
 .edu-timeline-item {
-  width: 100%;
-  margin-bottom: 70px;
-  position: relative;
+    width: 100%;
+    margin-bottom: 70px;
+    position: relative;
 }
 
 .edu-timeline-item::after {
-  content: '';
-  display: block;
-  clear: both;
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .edu-timeline-img {
-  width: 30px;
-  height: 30px;
-  background-color: #2577bb;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  margin-top: 25px;
-  margin-left: -15px;
-  z-index: 2;
-  /* box-shadow: 0 0 8px #8b5cf6, 0 0 16px #8b5cf6; */
+    width: 30px;
+    height: 30px;
+    background-color: #2577bb;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-top: 25px;
+    margin-left: -15px;
+    z-index: 2;
+    /* box-shadow: 0 0 8px #8b5cf6, 0 0 16px #8b5cf6; */
 }
 
 /* Wrapper with glowing border */
 .edu-timeline-border {
-  position: relative;
-  width: 45%;
-  padding: 2px;
-  border-radius: 8px;
-  background: conic-gradient(
-    from 0deg,
-    #14b8a6,
-    #8b5cf6,
-    #341395,
-    #0d78a6,
-    #14b8a6
-  );
-  animation: rotate-border 4s linear infinite;
-  background-size: 200% 200%;
-  overflow: hidden;
-  z-index: 1;
+    position: relative;
+    width: 45%;
+    padding: 2px;
+    border-radius: 8px;
+    background: conic-gradient(from 0deg,
+            #14b8a6,
+            #8b5cf6,
+            #341395,
+            #0d78a6,
+            #14b8a6);
+    animation: rotate-border 4s linear infinite;
+    background-size: 200% 200%;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .edu-timeline-content {
-  position: relative;
-  width: 100%;
-  padding: 30px 40px;
-  border-radius: 6px;
-  background-color: #1e1e4f;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 120px;
-  z-index: 2;
+    position: relative;
+    width: 100%;
+    padding: 30px 40px;
+    border-radius: 6px;
+    background-color: #1e1e4f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 120px;
+    z-index: 2;
 }
 
 /* Arrows */
 .edu-timeline-border::after {
-  content: '';
-  position: absolute;
-  border-style: solid;
-  width: 0;
-  height: 0;
-  top: 30px;
-  right: -15px;
-  border-width: 10px 0 10px 15px;
-  border-color: transparent transparent transparent #1e1e4f;
-  z-index: 10;
+    content: '';
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 30px;
+    right: -15px;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent #1e1e4f;
+    z-index: 10;
 }
 
 .edu-timeline-item:nth-child(even) .edu-timeline-border {
-  float: right;
+    float: right;
 }
 
 .edu-timeline-item:nth-child(even) .edu-timeline-border::after {
-  left: -15px;
-  right: auto;
-  border-width: 10px 15px 10px 0;
-  border-color: transparent #1e1e4f transparent transparent;
-}
-
-.edu-timeline-content h1 {
-  margin: 0;
-  font-size: 2.2rem;
-  font-weight: 600;
-}
-
-.edu-timeline-content h2 {
-  margin: 8px 0 0;
-  font-size: 1.8rem;
-  font-weight: 500;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .edu-timeline::before {
-    left: 50px;
-  }
-
-  .edu-timeline-img {
-    left: 50px;
-  }
-
-  .edu-timeline-border {
-    width: auto;
-    margin-left: 70px;
-    max-width: 100%;
-    float: none !important;
-  }
-
-  .edu-timeline-border::after {
     left: -15px;
     right: auto;
     border-width: 10px 15px 10px 0;
     border-color: transparent #1e1e4f transparent transparent;
-  }
+}
+
+.edu-timeline-content h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.edu-timeline-content h2 {
+    margin: 8px 0 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .edu-timeline::before {
+        left: 50px;
+    }
+
+    .edu-timeline-img {
+        left: 50px;
+    }
+
+    .edu-timeline-border {
+        width: auto;
+        margin-left: 70px;
+        max-width: 100%;
+        float: none !important;
+    }
+
+    .edu-timeline-border::after {
+        left: -15px;
+        right: auto;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent #1e1e4f transparent transparent;
+    }
 }
 
 .edu-heading {
-  margin-top: 300px;
+    margin-top: 300px;
 }
 
 /* Animation */
 @keyframes rotate-border {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 
