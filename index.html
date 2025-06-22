@@ -183,7 +183,7 @@
           <p class="jello">l</p>
           <p class="jello">.</p>
         </article>
-        <article id="work" data-aos="fade-up" data-aos-delay="400">
+        <!-- <article id="work" data-aos="fade-up" data-aos-delay="400">
           <div>
             <p class="jello">A</p>
             <p class="jello">I</p>
@@ -220,9 +220,60 @@
             <p class="jello">r</p>
             <p class="jello">.</p>
           </div>
+        </article> -->
+        <!----->
+        <article id="work" data-aos="fade-up" data-aos-delay="400">
+          <div id="role-container-1" class="role-text"></div>
+          <div id="role-container-2" class="role-text"></div>
         </article>
 
 
+        <script>
+          const roles = [
+            ["AI", "Engineer"],
+            ["Web", "Developer"],
+          
+          ];
+
+          const container1 = document.getElementById("role-container-1");
+          const container2 = document.getElementById("role-container-2");
+          let index = 0;
+
+          function renderWord(container, word) {
+            container.innerHTML = "";
+            for (let char of word) {
+              const p = document.createElement("p");
+              p.className = "jello";
+              p.textContent = char;
+              container.appendChild(p);
+            }
+          }
+
+          function updateRoles() {
+            // fade out
+            container1.classList.add("fade-out");
+            container2.classList.add("fade-out");
+
+            // wait for fade, then update
+            setTimeout(() => {
+              const [first, second] = roles[index];
+              renderWord(container1, first);
+              renderWord(container2, second);
+
+              // fade in
+              container1.classList.remove("fade-out");
+              container2.classList.remove("fade-out");
+
+              index = (index + 1) % roles.length;
+            }, 500);
+          }
+
+          updateRoles(); // initial render
+          setInterval(updateRoles, 3000);
+        </script>
+
+
+        <!---->
 
         <p id="info-para" data-aos="fade-up" data-aos-delay="600">
           Engineer focused on crafting web interfaces backed by AI logic, performance, and clarity.
