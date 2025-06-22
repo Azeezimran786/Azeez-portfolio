@@ -2437,3 +2437,17 @@ footer {
 
 
 /* education ends  */
+
+
+
+.dp img {
+  border: 4px solid #ffffff; /* soft blue border */
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 15px rgba(141, 186, 212, 0.2);
+}
+
+.dp img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(116, 177, 212, 0.5);
+}
