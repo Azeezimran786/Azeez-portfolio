@@ -2441,34 +2441,143 @@ footer {
 
 
 .dp img {
-  border: 4px solid #ffffff; /* soft blue border */
-  border-radius: 20px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 0 15px rgba(141, 186, 212, 0.2);
+    border: 4px solid #ffffff;
+    /* soft blue border */
+    border-radius: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 0 15px rgba(141, 186, 212, 0.2);
 }
 
 .dp img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(116, 177, 212, 0.5);
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(116, 177, 212, 0.5);
 }
 
 
 
 .role-text {
-  display: flex;
-  transition: opacity 0.5s ease;
-  opacity: 1;
+    display: flex;
+    transition: opacity 0.5s ease;
+    opacity: 1;
 }
 
 .role-text.fade-out {
-  opacity: 0;
+    opacity: 0;
 }
 
 
 #ibm-plex-sans {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+
+/* EXISTING STYLES ABOVE REMAIN UNCHANGED */
+
+/* Responsive Fixes Below 600px */
+@media (max-width: 600px) {
+  .landing-page-container {
+    flex-direction: column;
+    height: auto;
+    padding: 4rem 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-content {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #hello-friend {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  #name, #work {
+    font-size: 3.5rem;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #info-para {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+  }
+
+  .contact-btn-div {
+    justify-content: center;
+  }
+
+  .about-section {
+    width: 90%;
+  }
+
+  .info-dp-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dp {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+
+  .about-info {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .edu-wrap {
+    flex-direction: column;
+    width: 90vw;
+    height: auto;
+  }
+
+  .edu-overlay {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .edu-overlay-content {
+    width: 100%;
+    height: auto;
+    border: none;
+    padding: 1rem;
+  }
+
+  .edu-image-content,
+  .edu-image-content2,
+  .edu-text {
+    position: static;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
+
+  .edu-text {
+    padding: 2rem 1rem;
+  }
+
+  .edu-dots {
+    display: none;
+  }
+
+  .edu-wrap:hover .edu-overlay,
+  .edu-wrap:hover .edu-image-content,
+  .edu-wrap:hover .edu-image-content2,
+  .edu-wrap:hover .edu-overlay-content,
+  .edu-wrap:hover .edu-dots {
+    transform: none !important;
+    width: 100% !important;
+  }
 }
